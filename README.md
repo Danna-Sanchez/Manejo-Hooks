@@ -1,70 +1,44 @@
-# GitHub Codespaces ♥️ React
+# Calculadora de Áreas de Figuras Geométricas
 
-Welcome to your shiny new Codespace running React! We've got everything fired up and running for you to explore React.
+Proyecto web de página única (single page) desarrollado en **React**, que permite calcular el área de tres figuras geométricas: **triángulo**, **rectángulo** y **cuadrado**.
 
-You've got a blank canvas to work on from a git perspective as well. There's a single initial commit with the what you're seeing right now - where you go from here is up to you!
+## Descripción
 
-Everything you do here is contained within this one codespace. There is no repository on GitHub yet. If and when you’re ready you can click "Publish Branch" and we’ll create your repository and push up your project. If you were just exploring then and have no further need for this code then you can simply delete your codespace and it's gone forever.
+El usuario selecciona una figura en un menú desplegable e ingresa sus medidas (Base/Altura, o Lado en el caso del cuadrado). Al presionar **Calcular**, la aplicación obtiene el área usando **React Hooks** (`useState`) y la muestra en pantalla. También cuenta con un botón **Limpiar** para reiniciar el formulario.
 
-This project was bootstrapped for you with [Vite](https://vitejs.dev/).
+- **Triángulo:** Área = (base × altura) / 2
+- **Rectángulo:** Área = base × altura
+- **Cuadrado:** Área = lado × lado
 
-## Available Scripts
+Si la figura seleccionada es "Cuadrado", el formulario oculta automáticamente el segundo campo (Altura), ya que el cuadrado solo necesita un valor.
 
-In the project directory, you can run:
+## Funcionalidades
 
-### `npm start`
+- Cálculo dinámico según la figura seleccionada (`switch` sobre el estado `figura`).
+- Validación de campos: no permite calcular si los valores están vacíos o no son numéricos.
+- Botón **Limpiar** que reinicia todos los campos y el resultado.
+- Diseño responsivo con tarjeta centrada, degradado de fondo y estilos personalizados en `Figuras.css`.
 
-We've already run this for you in the `Codespaces: server` terminal window below. If you need to stop the server for any reason you can just run `npm start` again to bring it back online.
+## Tecnologías utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000/](http://localhost:3000/) in the built-in Simple Browser (`Cmd/Ctrl + Shift + P > Simple Browser: Show`) to view your running application.
+- React 18
+- Create React App (`react-scripts`)
+- Bootstrap 5 (CDN, para el select y los inputs)
+- CSS personalizado (Flexbox, degradados, animaciones)
+- React Hooks (`useState`)
 
-The page will reload automatically when you make changes.\
-You may also see any lint errors in the console.
+## Instalación y ejecución
 
-### `npm test`
+```bash
+npm start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+La aplicación se abrirá automáticamente en:
 
-### `npm run build`
+```
+http://localhost:3000
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Autor
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-## Learn More
-
-You can learn more in the [Vite documentation](https://vitejs.dev/guide/).
-
-To learn Vitest, a Vite-native testing framework, go to [Vitest documentation](https://vitest.dev/guide/)
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://sambitsahoo.com/blog/vite-code-splitting-that-works.html](https://sambitsahoo.com/blog/vite-code-splitting-that-works.html)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://github.com/btd/rollup-plugin-visualizer#rollup-plugin-visualizer](https://github.com/btd/rollup-plugin-visualizer#rollup-plugin-visualizer)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://dev.to/hamdankhan364/simplifying-progressive-web-app-pwa-development-with-vite-a-beginners-guide-38cf](https://dev.to/hamdankhan364/simplifying-progressive-web-app-pwa-development-with-vite-a-beginners-guide-38cf)
-
-### Advanced Configuration
-
-This section has moved here: [https://vitejs.dev/guide/build.html#advanced-base-options](https://vitejs.dev/guide/build.html#advanced-base-options)
-
-### Deployment
-
-This section has moved here: [https://vitejs.dev/guide/build.html](https://vitejs.dev/guide/build.html)
-
-### Troubleshooting
-
-This section has moved here: [https://vitejs.dev/guide/troubleshooting.html](https://vitejs.dev/guide/troubleshooting.html)
+Danna Sánchez
